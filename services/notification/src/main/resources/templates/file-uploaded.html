@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Upload Notification</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #555;
+      margin: 10px 0;
+    }
+
+    .details {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+
+    .details p {
+      margin: 5px 0;
+    }
+
+    .footer {
+      margin-top: 20px;
+      padding-top: 10px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <h1>File Upload Notification</h1>
+  <p>Dear <span th:text="${userName}"></span>,</p>
+  <p>This is to inform you that your file has been successfully uploaded.</p>
+
+  <div class="details">
+    <p><strong>File :</strong> <span th:text="${fileName}"></span></p>
+  </div>
+
+  <p>If you have any questions or concerns, please feel free to contact us.</p>
+
+  <div class="footer">
+    <p>Thank you for using our service.</p>
+    <p>Best regards,<br>EduShare</p>
+  </div>
+</div>
+</body>
+
+</html>

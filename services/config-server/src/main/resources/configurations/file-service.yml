@@ -1,0 +1,28 @@
+server:
+  port: 8090
+spring:
+  data:
+    mongodb:
+      username: khalil
+      password: khalil
+      host: localhost
+      port: 27017
+      database: file
+      authentication-database: admin
+
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.type.mapping: fileUploaded:com.khalil.storage.notification.FileUploadedNotificationRequest
+application:
+  config:
+    user-url: http://localhost:8222/api/v1/users
+
+aws:
+  accessKey: secret
+  secretKey: secret
+  serviceEndpoint: http://localhost:4566
+  signingRegion: eu-central-2
