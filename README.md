@@ -50,7 +50,7 @@ The project includes the following databases, each running in its own Docker con
 
 5. **Run Discovery Server**:
    ```bash
-   cd discovery-server
+   cd discovery
    mvn spring-boot:run
    ```
 
